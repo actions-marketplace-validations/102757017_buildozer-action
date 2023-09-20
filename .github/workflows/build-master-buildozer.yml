@@ -1,17 +1,7 @@
 name: Build (with Buildozer master)
 on:
-  push:
-    branches-ignore:
-      - data
-      - gh-pages
-    tags:
-      - '**'
-  pull_request:
-    branches-ignore:
-      - data
-      - gh-pages
-  schedule:
-      - cron: 0 0 */4 * * # at 00:00 UTC every fourth day
+  #手动触发工作流程运行
+  workflow_dispatch:
 
 jobs:
   # Build job. Builds app for Android with Buildozer
